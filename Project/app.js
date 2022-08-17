@@ -1,6 +1,6 @@
 // Document selectors
 const cardForm = document.querySelector("#cardForm");
-const main = document.querySelector("#main");
+const main = document.querySelector("#container");
 const second = document.querySelector("#second");
 const cont = document.querySelector('#continue');
 

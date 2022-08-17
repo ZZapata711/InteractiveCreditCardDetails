@@ -1,7 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
 .hide {
     display: none;
 }
 
 .show {
     display: block;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-image: url('./images/bg-main-mobile.png');
+    background-size: cover;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-back {
+    width: 285px;
+    height: 155px;
+    background-image: url('./images/bg-card-back.png');
+    background-size: cover;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#cardCvc {
+    margin-right: 40px;
+    font-size: 10px;
+}
+
+.card-front {
+    width: 285px;
+    height: 155px;
+    background-image: url('./images/bg-card-front.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#logo {
+    width: 50px;
+    display: flex;
+    align-self: flex-start;
+    margin-left: 15px;
+}
+
+.nameAndExp {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: end;
+    align-self: flex-end;
+}
+
+.nameAndExp p {
+    color: hsl(270, 3%, 87%);
+}
+
+#cardName {
+    margin-left: 22px;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+#cardYear {
+    margin-right: 20px;
+    font-size: 10px;
+}
+
+#cardMonth {
+    font-size: 10px;
+}
+
+#cardNum {
+    letter-spacing: 2px;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cardForm {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#cardForm label {
+    color: hsl(278, 68%, 11%);
+    margin-bottom: 10px;
+}
+
+#cardForm input,
+#cardForm button {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 5px 2px;
+    border: 1px solid hsl(270, 3%, 87%);
+}
+
+#cardForm button {
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(270, 3%, 87%);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

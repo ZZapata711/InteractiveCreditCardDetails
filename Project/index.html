@@ -25,20 +25,25 @@
 
 <body>
 
-  <div id="main">
+  <div id="container">
 
 
-    <div class="card-front">
-      <p id="cardNum">0000 0000 0000 0000</p>
-      <p id="cardName">Jane Appleseed</p>
-      <p><span id="cardMonth">00</span>/<span id="cardYear">00</span></p>
-    </div>
+    <header>
+      <div class="card-back">
+        <p id="cardCvc">000</p>
+      </div>
+      <div class="card-front">
+        <img id="logo" src="images/card-logo.svg">
+        <p id="cardNum">0000 0000 0000 0000</p>
+        <div class="nameAndExp">
+          <p id="cardName">Jane Appleseed</p>
+          <p><span id="cardMonth">00</span>/<span id="cardYear">00</span></p>
+        </div>
 
-    <div class="card-back">
-      <p id="cardCvc">000</p>
-    </div>
+      </div>
 
 
+    </header>
 
     <div class="form">
       <form action="" id="cardForm">
@@ -54,14 +59,16 @@
         <button id="submit">Confirm</button>
       </form>
     </div>
+
+    <!-- Completed state start -->
+    <div id="second" class="hide">
+      Thank you!
+      We've added your card details
+      <button id="continue">Continue</button>
+    </div>
   </div>
 
-  <!-- Completed state start -->
-  <div id="second" class="hide">
-    Thank you!
-    We've added your card details
-    <button id="continue">Continue</button>
-  </div>
+
 
 
   <!-- <div class="attribution">
