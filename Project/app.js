@@ -79,6 +79,7 @@ formArray.forEach(elem => {
     })
 })
 
+
 // Capitalize innerText of each label element
 Array.from(cardForm.getElementsByTagName('label')).forEach(label => {
     label.innerText = label.innerText.toUpperCase();
