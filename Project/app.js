@@ -1,8 +1,9 @@
 // Document selectors
 const cardForm = document.querySelector("#cardForm");
 const main = document.querySelector("#container");
-const second = document.querySelector("#second");
+const second = document.querySelector(".second");
 const cont = document.querySelector('#continue');
+const form = document.querySelector(".form");
 
 // Card selectors
 const cardNum = document.querySelector("#cardNum");
@@ -78,5 +79,11 @@ formArray.forEach(elem => {
     })
 })
 
+// Capitalize innerText of each label element
+Array.from(cardForm.getElementsByTagName('label')).forEach(label => {
+    label.innerText = label.innerText.toUpperCase();
+})
 
-
+Array.from(second.getElementsByTagName('h1')).forEach(label => {
+    label.innerText = label.innerText.toUpperCase();
+})

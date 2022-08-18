@@ -8,17 +8,18 @@
     font-family: 'Space Grotesk', sans-serif;
 }
 
-.hide {
-    display: none;
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
 }
 
-.show {
-    display: block;
-}
+
 
 .container {
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 header {
@@ -30,7 +31,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    margin-bottom: 50px;
 }
 
 .card-back {
@@ -43,6 +44,9 @@ header {
     justify-content: flex-end;
     align-items: center;
     border-radius: 10px;
+    position: relative;
+    top: 50px;
+    left: 20px;
 }
 
 #cardCvc {
@@ -60,6 +64,10 @@ header {
     justify-content: space-evenly;
     align-items: center;
     border-radius: 10px;
+    z-index: 1;
+    position: relative;
+    top: 30px;
+    right: 20px;
 }
 
 #logo {
@@ -102,10 +110,28 @@ header {
 }
 
 
-.form {
+.form,
+.second {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.second {
+    height: 250px;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.second h1 {
+    font-size: 24px;
+    letter-spacing: 5px;
+    color: hsl(278, 68%, 11%);
+}
+
+.second p {
+    color: hsl(279, 6%, 55%);
+    font-weight: 500;
 }
 
 #cardForm {
@@ -117,6 +143,7 @@ header {
 #cardForm label {
     color: hsl(278, 68%, 11%);
     margin-bottom: 10px;
+    font-size: 14px;
 }
 
 #cardForm input,
@@ -132,4 +159,103 @@ header {
     color: hsl(270, 3%, 87%);
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.second button {
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(270, 3%, 87%);
+    border-radius: 5px;
+    padding: 10px 2px;
+    width: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input::placeholder {
+    padding-left: 5px;
+    color: hsl(270, 3%, 87%);
+    font-weight: 300;
+}
+
+.expDate label {
+    display: inline-block;
+}
+
+.cvcLabel {
+    margin-left: 20px;
+}
+
+#month,
+#year,
+#cvc {
+    display: inline;
+    width: 70px;
+}
+
+#cvc {
+    width: 100px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block;
+}
+
+#cardForm input:active {
+    border-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)) !important;
+}
+
+/* Desktop Design */
+@media screen and (min-width: 900px) {
+    .container {
+        display: block;
+    }
+
+    header {
+        display: inline-block;
+        width: 30%;
+        height: 100vh;
+        background-image: url('images/bg-main-desktop.png');
+        background-size: cover;
+        margin-bottom: 0;
+    }
+
+    .form {
+        display: inline-block;
+        width: 60%;
+        margin-left: 80px;
+    }
+
+    #cardForm {
+        width: 50%;
+        margin: auto;
+    }
+
+    .card-front {
+        left: 50%;
+        top: -3%;
+    }
+
+    .card-back {
+        top: 45%;
+        left: 75%;
+    }
+
+    .second {
+        margin: auto;
+    }
+
+    .second button {
+        width: 50%;
+    }
+
+    .hide {
+        display: none !important;
+    }
+
 }
